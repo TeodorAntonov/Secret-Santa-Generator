@@ -1,0 +1,132 @@
+.add-participant{
+    border-radius: 15px;
+    font-size: 26px;
+    transition-duration: 0.4s;
+    background-color: rgb(101, 201, 235);
+    border: 2px solid black;
+}
+.add-participant:hover{
+    background-color: #b81634;
+    color: whitesmoke;
+    border: 8px solid rgb(24, 133, 41);
+    font-style: italic;
+    border-radius: 15px;
+}
+.disabled-button{
+    border-radius: 15px;
+    font-size: 26px;
+    color: whitesmoke;
+    font-family: 'Mountains of Christmas';
+    font-size: 22px;
+}
+
+.participant-name{
+    height: 40px;
+    width: 300px;
+    font-size: 24px;
+    font-style:oblique;
+    background-color: rgb(237, 184, 67);
+    border: 6px solid rgb(124, 11, 11);
+    color: rgb(39, 4, 4);
+    text-align: center;
+    border-radius: 25px;
+}
+.form-control{
+    height: 40px;
+    width: 300px;
+    font-size: large;
+    border: 2px solid black;
+}
+.btndiv {
+    height: 40px;
+    width: 300px;
+    font-size: 24px;
+    font-style: oblique;
+    background-color: rgb(20, 120, 47);
+    border: 6px solid rgb(103, 3, 3);
+    color: rgb(230, 226, 226);
+    text-align: center;
+    border-radius: 25px;
+}
+.right-div {
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    top: 410px;
+    right: 1000px;
+}
+.right-div-loader {
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    top: 440px;
+    left: 850px;
+}
+.right-div-sender{
+    width: 100px;
+    height: 50px;
+    position: fixed;
+    top: 440px;
+    left: 1350px;
+}
+.sender{
+    border-radius: 25px;
+    font-size: 21px;
+    font-style: italic;
+    background-color: rgb(58, 210, 218);
+    border: 5px solid rgb(164, 4, 4);
+    height: 40px;
+    width: 300px;
+    display: flex;
+    margin-bottom: 10px;
+}
+.sender:hover{
+    background-color: #de11cd;
+    color: rgb(47, 4, 4);
+    border: 5px solid rgb(11, 72, 20);
+    font-style: italic;
+    border-radius: 15px;
+}
+
+.button-Shuffle {
+    display: inline-block;
+    padding: 15px 25px;
+    font-size: 24px;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    outline: none;
+    color: #fff;
+    background-color: #af1212;
+    border: none;
+    border-radius: 50px;
+    box-shadow: 0 11px #999;
+    font-family: 'Mountains of Christmas';
+    font-size: 32px;
+  }
+  
+  .button-Shuffle:hover {background-color: #3e8e41}
+  
+  .button-Shuffle:active {
+    background-color: #d81b47;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+.loader {
+    width: 100px;
+    height: 30px;
+    display: flex;
+    margin-bottom: 20px;
+  }
+  .loader:before {
+    content: "";
+    background: #c20707;
+    border: 8px solid rgb(237, 230, 230);
+    width: 15px;
+    clip-path: polygon(0 10px,calc(100% - 15px) 10px,calc(100% - 15px) 0,100% 50%,calc(100% - 15px) 100%,calc(100% - 15px) calc(100% - 10px),0 calc(100% - 10px));
+    animation: l1 1.5s infinite linear;
+  }
+  @keyframes l1 {
+    90%,100%{flex-grow: 1}
+  }

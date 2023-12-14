@@ -1,0 +1,63 @@
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <div class="col-lg-12" style="left: 230px;">
+            <label style="color: white;">Please Enter Participant's Name:</label>
+            <input type="text" class="form-control" [(ngModel)]="participantName">
+            <label style="color: white;">Please Enter Participant's Email:</label>
+            <input type="text" class="form-control" [(ngModel)]="participantEmail">
+            <br>
+            <button 
+            class="add-participant" 
+            type="button" 
+            (click)="onAddParticipant()" 
+            *ngIf="isShuffled"  [ngClass]="{'add-participant': true}">Add Participant +
+            </button>
+            <p
+            class="disabled-button" 
+            *ngIf="!isShuffled">Your Santa Claus List is ready!</p>
+        </div>
+    </div>
+</div>
+<br>
+<div class="row">
+    <label style="color: white; font-size: medium;">SECRET SANTA:</label>
+    <div class="col-md-12">
+        <p class="participant-name" *ngFor="let participant of participants">
+            {{participant.name}}
+        </p>
+        <br>
+    </div>
+    <div class="right-div-loader">
+        <div *ngFor="let recipient of recipients" class="loader">
+            <p></p>
+        </div>
+        <br>
+    </div>
+    <div class="right-div">
+    <label style="color: white; font-size: medium;">Recipient:</label>
+        <div *ngFor="let recipient of recipients">
+           <p class="btndiv">{{recipient.recipient}}</p>
+        </div>
+        <br>
+    </div>
+    <div class="right-div-sender">
+        <div *ngFor="let participant of participants">
+            <button 
+            *ngIf="!isShuffled" class="sender" type="button" 
+            (click)="onSendEmail(participant.name, participant.recipient, participant.email)">Notify: {{participant.name}}</button>
+        </div>
+        <br>
+    </div>
+    <div class="col-lg-12" style="left: 260px;">
+        <button class="button-Shuffle" type="button" (click)="onShufflePaticipants()">SECRET SANTA</button>
+    </div>
+</div>

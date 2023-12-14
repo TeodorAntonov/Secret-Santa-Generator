@@ -1,0 +1,11 @@
+.merry-christmas{
+    font-size: larger;
+    color: white;
+}
+.title{
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 90px;
+    font-family: 'Mountains of Christmas';
+}
